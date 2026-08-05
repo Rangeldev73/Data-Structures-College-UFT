@@ -4,6 +4,9 @@ void bubble_sort(int v[], int n);
 
 int main(){
     int v[10] = {5, 2, 9, 1, 5, 6,9,3,9,10},n=10;
+    for(int i=0;i<10;i++){
+        printf("%d-",v[i]);
+    }
     bubble_sort(v,n);
     for(int i=0;i<10;i++){
         printf("%d-",v[i]);
