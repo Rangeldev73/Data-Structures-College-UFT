@@ -13,6 +13,7 @@ int main(){
     for(int i=0;i<10;i++){
         printf("%d-",v[i]);
     }
+    return 0;
 }
 
 void merge(int v[], int inicio, int meio, int fim){
