@@ -7,6 +7,7 @@ int main(){
     printf("Insira n: ");
     scanf("%d",&n);
     printf("%d",fat(n));
+    return 0;;
 }
 
 int fat(int n){
