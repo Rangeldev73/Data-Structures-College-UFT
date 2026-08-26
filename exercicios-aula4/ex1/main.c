@@ -11,7 +11,7 @@ int main(){
     Rac* r_invalido = create(5, 0); 
 
     if (r_invalido == NULL) {
-        printf("Teste Denominador Zero: OK (Tentativa de criar fração com denominador 0 bloqueada)\n\n");
+        printf("Teste Denominador Zero: OK (Tentativa de criar fracao com denominador 0 bloqueada)\n\n");
     }
 
     Rac* r_soma = soma(r1, r3);
