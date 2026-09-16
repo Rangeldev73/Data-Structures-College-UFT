@@ -27,21 +27,20 @@ int main(){
         }
         else if(comando=='r'){
 
-            bool encontrado=false;
+            bool found=false;
             int catual;
             while(!Stack_empty(principal)){
                 Stack_pop(principal,&catual);
                 printf("%d, ", catual);
                 if(catual==id){
-                    encontrado=true;
+                    found=true;
                     break;
                 }
                 else {
                     Stack_push(secundaria, catual);
-
                 }
             }
-            if(!encontrado){
+            if(!found){
                 printf("underflow\n");
             }
             else{

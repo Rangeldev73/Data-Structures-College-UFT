@@ -1,5 +1,5 @@
-#ifndef STACK
-#define STACK
+#ifndef STACK_H
+#define STACK_H
 #include <stdbool.h>
 
 typedef struct _stack Stack;
