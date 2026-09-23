@@ -37,4 +37,9 @@ bool Queue_dequeue(Queue*, int*);
  * @return unsigned int : Quantidade de elementos presentes na Queue.
  */
 unsigned int Queue_getSize(Queue*);
+/**
+ * Destroi a Queue
+ * @param Queue* ponteiro para uma queue instanciada
+ */
+void Queue_destroy(Queue*);
 #endif

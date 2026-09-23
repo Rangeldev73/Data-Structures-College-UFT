@@ -48,3 +48,7 @@ bool Queue_dequeue(Queue* q, int* t){
 unsigned int Queue_getSize(Queue* q){
     return q ? q->qtd : 0;
 }
+
+void Queue_destroy(Queue* q){
+    free(q);
+}
