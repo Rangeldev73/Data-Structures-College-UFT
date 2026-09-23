@@ -8,12 +8,12 @@ struct _trans {
     int head;
     int tail;
     unsigned int qtd;
-    int capacidade;
+    unsigned int  capacidade;
 };
 
-Trans* Trans_create(int c) {
-    if(c <= 0) return NULL; 
-
+Trans* Trans_create(unsigned int c) { 
+    if(c == 0) return NULL;
+    
     Trans* t = (Trans*) malloc(sizeof(Trans));
     if(t){
         t->dados = (PixED*) malloc(c * sizeof(PixED));

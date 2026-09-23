@@ -14,9 +14,9 @@ typedef struct {
 typedef struct _trans Trans;
 
 /**
- * Cria a fila com capacidade para N elementos.
+ * Cria a fila com capacidade para v elementos.
  */
-Trans* Trans_create(int v);
+Trans* Trans_create(unsigned int v);
 
 /**
  * Libera a memoria alocada para a fila.

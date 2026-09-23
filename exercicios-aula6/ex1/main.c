@@ -3,8 +3,8 @@
 #include "transb.h"
 
 int main() {
-    int n;
-    if (scanf("%d", &n) != 1) return 0;
+    unsigned int  n;
+    if (scanf("%u", &n) != 1) return 0; 
 
     Trans* fila = Trans_create(n);
     if (!fila) return 1;
