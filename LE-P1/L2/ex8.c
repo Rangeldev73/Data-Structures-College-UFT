@@ -13,6 +13,3 @@ bool ex8(Queue* q, Stack* es) {
     }
     return true;
 }
-
-//1234
-//4321
