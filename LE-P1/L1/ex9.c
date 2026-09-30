@@ -9,7 +9,6 @@ Queue* ex9(Queue* q1, Queue* q2) {
         return NULL;
     }
 
-    bool q1_turn = true;
     int n;
    while (!Queue_empty(q1) && !Queue_empty(q2)) {
         Queue_dequeue(q1, &n);
