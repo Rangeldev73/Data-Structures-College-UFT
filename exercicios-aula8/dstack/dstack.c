@@ -4,7 +4,7 @@
 
 typedef struct _no {
     int info;
-    struct _no* prox;
+    struct _no* next;
 }TNo;
 
 struct _stack {
@@ -22,8 +22,8 @@ bool Stack_push(Stack* s, int v) {
     TNo* n = malloc(sizeof(TNo));
     if(!n) return false;
     n->info=v;
-    n->prox=NULL;
-    if(s->top) n->prox = s->top;
+    n->next=NULL;
+    if(s->top) n->next = s->top;
     s->top = n;
     return true;
 }
@@ -33,7 +33,7 @@ bool Stack_pop(Stack* s, int* v) {
     if(!s->top) return false;
     TNo* aux = s->top;
     *v = aux->info;
-    s->top = aux->prox;
+    s->top = aux->next;
     free(aux);
     return true;
 }
@@ -49,7 +49,7 @@ void Stack_destroy(Stack* s) {
     if (!s) return;
     TNo* aux = s->top;
     while(aux) {
-        s->top = aux->prox;
+        s->top = aux->next;
         free(aux);
         aux = s->top;
     }
@@ -63,7 +63,7 @@ unsigned int Stack_qty(Stack* s) {
     int c=0;
     while(aux) {
         c++;
-        aux=aux->prox;
+        aux=aux->next;
     }
     return c;
 }
