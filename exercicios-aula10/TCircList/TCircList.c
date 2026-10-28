@@ -22,14 +22,16 @@ bool TCList_insert(TCList* l, int v) {
     TNo* n = malloc(sizeof(TNo));
     if(!n) return false;
     n->info=v;
-    n->prox=NULL;
-    if(!l->inicio) l->inicio=n;
+    if(!l->inicio) {
+        l->inicio=n;
+        n->prox=n;
+    }
     else {
         TNo* aux = l->inicio;
         while(aux->prox!=l->inicio) aux=aux->prox;
         aux->prox=n;
+        n->prox=l->inicio;
     }
-    n->prox=l->inicio;
     return true;
 }
 
