@@ -17,7 +17,7 @@ TCList* TCList_create() {
     return l;
 }
 
-bool TCList_insert(TCList* l, int v) {
+bool TCList_insert_end(TCList* l, int v) {
     if(!l) return false;
     TNo* n = malloc(sizeof(TNo));
     if(!n) return false;
@@ -31,6 +31,25 @@ bool TCList_insert(TCList* l, int v) {
         while(aux->prox!=l->inicio) aux=aux->prox;
         aux->prox=n;
         n->prox=l->inicio;
+    }
+    return true;
+}
+
+bool TCList_insert_begin(TCList* l, int v) {
+    if(!l) return false;
+    TNo* n = malloc(sizeof(TNo));
+    if(!n) return false;
+    n->info=v;
+    if(l->inicio) {
+        TNo* aux = l->inicio;
+        while(aux->prox!=l->inicio) aux=aux->prox;
+        aux->prox=n;
+        n->prox=l->inicio;
+        l->inicio=n;
+    }
+     else {      
+        l->inicio=n;
+        n->prox=n;
     }
     return true;
 }

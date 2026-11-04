@@ -4,7 +4,7 @@
 #include "sbs.h"
 
 int main() {
-    char str[10002]; 
+    char str[1024]; 
     if(fgets(str, sizeof(str), stdin) == NULL) return 0;
     int len = strlen(str);
        
